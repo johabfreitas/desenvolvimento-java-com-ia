@@ -23,7 +23,7 @@ public class Account {
     @Column(scale = 13, precision = 2)
     private BigDecimal balance;
 
-    @Column(scale = 13, precision = 2)
+    @Column(name = "additional_limit", scale = 13, precision = 2)
     private BigDecimal limit;
 
     public String getNumber() {
@@ -46,15 +46,15 @@ public class Account {
         return balance;
     }
 
-    public void setBalance(Number balance) {
+    public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
-    public Number getLimit() {
+    public BigDecimal getLimit() {
         return limit;
     }
 
-    public void setLimit(Number limit) {
+    public void setLimit(BigDecimal limit) {
         this.limit = limit;
     }
 
