@@ -1,11 +1,30 @@
 package br.com.johabfreitas.desenvolvimento_java_com_ia.model;
 
+import java.math.BigDecimal;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity(name = "tb_account")
 public class Account {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true)
     private String number;
+
     private String agency;
-    private Number balance;
-    private Number limit;
+    
+    @Column(scale = 13, precision = 2)
+    private BigDecimal balance;
+
+    @Column(scale = 13, precision = 2)
+    private BigDecimal limit;
 
     public String getNumber() {
         return number;
