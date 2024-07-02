@@ -7,8 +7,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity(name = "tb_card")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Card {
 
     @Id
@@ -20,21 +28,5 @@ public class Card {
 
     @Column(name = "available_limite",scale = 13, precision = 2)
     private BigDecimal limit;
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
-
-    public BigDecimal getLimit() {
-        return limit;
-    }
-
-    public void setLimit(BigDecimal limit) {
-        this.limit = limit;
-    }
 
 }
