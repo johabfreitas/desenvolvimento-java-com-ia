@@ -35,6 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+.env
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/java,visualstudiocode,gradle

@@ -9,5 +9,5 @@ public class DesenvolvimentoJavaComIaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DesenvolvimentoJavaComIaApplication.class, args);
 	}
-
+// SPRING_PROFILES_ACTIVE = prd
 }
